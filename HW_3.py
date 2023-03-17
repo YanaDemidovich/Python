@@ -25,6 +25,19 @@ print(count) """
 #     6
 #     -> 5
 
+some_list = [int(input("Введите число: ")) for _ in range(int(input("Введите кол-во чисел: ")))]
+a = int(input("Введите число для поиска: "))
+list_b = []
+for ind in range(len(some_list)):
+    b = a - some_list[ind]
+    list_b.append(b)
+print(list_b)
+minb = list_b[0]
+for i in list_b:
+    if i < minb:
+        minb = i
+print(minb)
+
 
 # *Задача 20: * В настольной игре Скрабл (Scrabble) каждая буква имеет определенную ценность. 
 # В случае с английским алфавитом очки распределяются так: A, E, I, O, U, L, N, S, T, R – 1 очко; 
