@@ -25,19 +25,23 @@ print(count) """
 #     6
 #     -> 5
 
-some_list = [int(input("Введите число: ")) for _ in range(int(input("Введите кол-во чисел: ")))]
+""" some_list = [int(input("Введите число: ")) for _ in range(int(input("Введите кол-во чисел: ")))]
 a = int(input("Введите число для поиска: "))
 list_b = []
-for ind in range(len(some_list)):
+for ind in range(len(some_list)): # создаем список со значениями разницы
     b = a - some_list[ind]
     list_b.append(b)
 print(list_b)
-minb = list_b[0]
+minb = list_b[0] # находим мин.разницу между числами
 for i in list_b:
     if i < minb:
         minb = i
-print(minb)
+print(list_b.index(minb)) # выводим индекс числа с мин.разницей
+print(some_list[list_b.index(minb)]) # выводим число с индексом мин.разницы """
 
+
+""" x = [1, 2, 3, 5.5, 17.0, 0.32, 22, 1000.222]
+print(x.index(min(x)) + min(x)) """
 
 # *Задача 20: * В настольной игре Скрабл (Scrabble) каждая буква имеет определенную ценность. 
 # В случае с английским алфавитом очки распределяются так: A, E, I, O, U, L, N, S, T, R – 1 очко; 
