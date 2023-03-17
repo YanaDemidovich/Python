@@ -48,3 +48,10 @@ for value in some_diсt.values():
 # Примечание: Пользователь может вводить значения
 # списка или список задан изначально.
 
+
+some_list = [int(input("Введите число: ")) for _ in range(int(input("Введите кол-во чисел: ")))]
+count = 0
+for ind in range(0, len(some_list) - 1):
+    if some_list[ind + 1] > some_list[ind]:
+        count += 1
+print(count)
