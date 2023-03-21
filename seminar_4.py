@@ -100,14 +100,75 @@ print(some_dict) """
 
 # Для облегчения используйте метод .split
 # Метод .split для строк. Разделение строки по разделителю (пробелу)
-""" a = input()
-b = a.split()
-print(b) """
+# a = input()
+# b = a.split()
+# print(b)
 
-some_str = input("Введите текст: ")
+""" some_str = input("Введите текст: ")
 b = some_str.split()
 print(b)
 some_dict = {}           # создаем словарь
 for letter in b:
     some_dict[letter] = some_dict.get(letter, 0) + 1
-print(some_dict)
+print(some_dict) """
+
+# второй вариант решения, где убирает символы вконце слова - не буквы
+
+""" a = input("Введите текст: ")
+b = a.split()
+for ind in range(0, len(b)):
+    if not b[ind].isalpha():
+        b[ind] = b[ind][0:-1]
+
+c = set(b)
+print(len(c)) """
+
+# третий вариант решения, где убирает символы во всем тексте - не буквы
+
+""" a = input("Введите текст: ")
+b = a.split()
+print(b)
+for ind in range(0, len(b)):
+    new_word = ''
+    for letter in b[ind]:
+        if letter.isalpha():
+            new_word += letter
+    b[ind] = new_word
+print(b)
+c = set(b)
+print(len(c)) """
+
+
+# Задача №29. 
+# Ваня и Петя поспорили, кто быстрее решит 
+# следующую задачу: “Задана последовательность 
+# неотрицательных целых чисел. Требуется определить 
+# значение наибольшего элемента 
+# последовательности, которая завершается первым 
+# встретившимся нулем (число 0 не входит в 
+# последовательность)”. Однако 2  друга оказались не 
+# такими смышлеными. Никто из ребят не смог до 
+# конца сделать это задание. Они решили так: у кого 
+# будет меньше ошибок в коде, тот и выиграл спор. За 
+# помощью товарищи обратились к Вам, студентам.
+
+
+# Ваня: сделали верный код
+""" n = int(input())
+max_number = n
+while n != 0:
+   n = int(input())
+   if max_number < n:
+       max_number = n
+print(max_number) """
+
+# Петя: 
+""" n = int(input())
+max_number = n
+while n != 0:
+   n = int(input())
+   if max_number < n:
+       max_number = n
+
+print(max_number) """
+
