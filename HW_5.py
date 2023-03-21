@@ -9,8 +9,10 @@
 
 some_list = input("Введите арифметическое выражение: ")
 print(some_list)
-b = some_list.split()
-print(b)
+print(eval(some_list))
+
+# b = some_list.split()
+# print(b)
 
 """ some_str = input("Введите текст: ")
 b = some_str.split()
