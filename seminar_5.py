@@ -20,5 +20,22 @@ for ind in range(0, len(marks_list)):
         marks_list[ind] = min
 print(marks_list) """
 
-# какая-то ерунда вышла
+##### какая-то ерунда вышла
+
+# Задача №35. 
+# Напишите функцию, которая принимает одно число и 
+# проверяет, является ли оно простым
+
+# Напоминание: Простое число - это число, которое 
+# имеет 2 делителя: 1  и n(само число)
+
+# Input: 5
+# Output: yes 
+
+def simpel_number(number):
+    for i in range(2, number // 2 +1):
+        if number % i == 0:
+            return "Число не простое"
+        return "Число простое"
+print(simpel_number(11))
 
