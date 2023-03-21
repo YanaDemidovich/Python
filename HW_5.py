@@ -7,16 +7,10 @@
 # Вывод
 # 4
 
-some_list = input("Введите арифметическое выражение: ")
+""" some_list = input("Введите арифметическое выражение: ")
 print(some_list)
-print(eval(some_list))
+print(eval(some_list)) """
 
-# b = some_list.split()
-# print(b)
-
-""" some_str = input("Введите текст: ")
-b = some_str.split()
-print(b) """
 
 # Задача 2
 # Словом в данной задаче считается последовательность букв, 
@@ -39,6 +33,19 @@ print(b) """
 # in
 # the
 # Highland
+
+some_list = input("Введите предложение: ")
+print(some_list)
+list1 = []
+for i in range(len(some_list)):
+    if i != " ":
+        list1 = some_list[:i]
+
+print(list1)
+
+""" for i in some_list:
+
+    print(i, end="\n") """
 
 # НЕОБЯЗАТЕЛЬНЫЕ
 
