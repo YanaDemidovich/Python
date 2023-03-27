@@ -92,7 +92,7 @@ print(func(some_list)) """
 
 # Альтернативный вариант решения при помощи словаря
 
-def func(some_list):
+""" def func(some_list):
     res_dict = {}  # создали пустой словарь
     for el in some_list:
         if el not in res_dict:
@@ -105,4 +105,5 @@ def func(some_list):
     return count
 
 some_list = [int(input("Введите число: ")) for _ in range(int(input("Введите кол-во элементов в списке: ")))]
-print(func(some_list))
+print(func(some_list)) """
+
