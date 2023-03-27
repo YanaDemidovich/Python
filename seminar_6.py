@@ -31,17 +31,39 @@ print(func(some_text)) """
 
 ## для более быстрой работы программы список list2 лучше превратить во вмножество
 
-def func(list1, list2):
+""" def func(list1, list2):
     result = []                 # создаем пустой список result
     list2_set = set(list2)      # превратили список list2 в множество list2_set
     for i in list1:             # для элементов из списка list1
         if i not in list2_set:  # если элемент списка не содержится в множестве list2_set
             result.append(i)    # добавляем элемент в конец созданного выше списка result
-    return result               # выводим спписок result
+    return result               # выводим спписок result """
 
 
-some_list1 = [int(input("Введите число: ")) for _ in range(int(input("Введите кол-во элементов в первом списке: ")))]
+""" some_list1 = [int(input("Введите число: ")) for _ in range(int(input("Введите кол-во элементов в первом списке: ")))]
 some_list2 = [int(input("Введите число: ")) for _ in range(int(input("Введите кол-во элементов во втором списке: ")))]
 
 result = func(some_list1, some_list2)
-print(result)
+print(result) """
+
+
+# Задача №41.
+# Дан массив, состоящий из целых чисел. Напишите 
+# программу, которая в данном массиве определит 
+# количество элементов, у которых два соседних и, при 
+# этом, оба соседних элемента меньше данного. Сначала 
+# вводится число N — количество элементов в массиве  
+# Далее записаны N чисел — элементы массива. Массив 
+# состоит из целых чисел. 
+# (каждое число вводится с новой строки)
+# 4 5 6 3 2 5 0 8 -> 2
+
+def func(some_list):
+    result = 0
+    for i in range(1, len(some_list) - 1):
+        if some_list[i] > some_list[i - 1] and some_list[i] > some_list[i + 1]:
+            result += 1
+    return result
+
+list1 = [int(input("Введите число: ")) for _ in range(int(input("Введите кол-во элементов в списке: ")))]
+print(func(list1))
