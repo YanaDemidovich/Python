@@ -58,7 +58,7 @@ print(result) """
 # (каждое число вводится с новой строки)
 # 4 5 6 3 2 5 0 8 -> 2
 
-def func(some_list):
+""" def func(some_list):
     result = 0
     for i in range(1, len(some_list) - 1):
         if some_list[i] > some_list[i - 1] and some_list[i] > some_list[i + 1]:
@@ -66,4 +66,43 @@ def func(some_list):
     return result
 
 list1 = [int(input("Введите число: ")) for _ in range(int(input("Введите кол-во элементов в списке: ")))]
-print(func(list1))
+print(func(list1)) """
+
+
+# Задача №43.
+# Дан список чисел. Посчитайте, сколько в нем пар 
+# элементов, равных друг другу. Считается, что любые 
+# два элемента, равные друг другу образуют одну пару, 
+# которую необходимо посчитать. Вводится список 
+# чисел. Все числа списка находятся на разных 
+# строках.
+# 2 2 3 1 4 5 3 3 -> 2
+# 2 2 3 1 4 5 3 3 3 -> 3
+
+""" def func(some_list):
+    c = 0
+    use = set()     # создали пустой массив
+    for el in some_list:
+        if el not in use:
+            c += some_list.count(el) // 2   # применяем метод count и делим нацело
+            use.add(el)
+    return c
+some_list = [int(input("Введите число: ")) for _ in range(int(input("Введите кол-во элементов в списке: ")))]
+print(func(some_list)) """
+
+# Альтернативный вариант решения при помощи словаря
+
+def func(some_list):
+    res_dict = {}  # создали пустой словарь
+    for el in some_list:
+        if el not in res_dict:
+            res_dict[el] = 1
+        else:
+            res_dict[el] += 1
+    count = 0
+    for value in res_dict.values():
+        count += value // 2
+    return count
+
+some_list = [int(input("Введите число: ")) for _ in range(int(input("Введите кол-во элементов в списке: ")))]
+print(func(some_list))
