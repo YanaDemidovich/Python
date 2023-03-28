@@ -7,22 +7,13 @@
 # Ввод: a1 = 3, d = 2 n = 10
 # Вывод: 3 5 7 9 11 13 15 17 19 21
 
-# return[el for el in range(a1, n * d + a1, d)]
-# print(func(a1, d, n))
-
-
-
 
 def func(a1, d, n):
-    result = [a1]
-    for el in range(result):
-        el = a1 + (n-1) * d        
-        result.append(el)
-    return result
-
+    for el in range(1, n):
+        return[el for el in range(a1, n * d + a1, d)]
+    
 a1 = int(input("Введите первый элемент: "))
 d = int(input("Введите разность: "))
 n = int(input("Введите кол-во элементов последовательности: "))
 
-result = func(a1, d, n)
-print(result)
+print(func(a1, d, n))
