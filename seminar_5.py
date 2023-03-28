@@ -32,10 +32,10 @@ print(marks_list) """
 # Input: 5
 # Output: yes 
 
-def simpel_number(number):
+""" def simpel_number(number):
     for i in range(2, number // 2 +1):
         if number % i == 0:
             return "Число не простое"
         return "Число простое"
-print(simpel_number(11))
+print(simpel_number(11)) """
 
