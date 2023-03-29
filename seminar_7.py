@@ -207,3 +207,64 @@ data = open(path, 'r')
 for line in data:
     print(line)
 data.close() """
+
+# Задача 1.
+# Создайте список из случайных чисел.
+# Найдите номер его последнего локального максимума (локальный максимум
+# это элемент, который больше любого из своих соседей)
+
+# Вариант 1. Прохождения по индексам с начала списка
+""" import random
+
+find_ind = -1
+our_list = [random.randint(1, 10) for _ in range(10)] # сделали рандомный список
+
+print(our_list)
+for ind in range(1, len(our_list) - 1):
+    if our_list[ind - 1] < our_list[ind] > our_list[ind + 1]:
+        find_ind = ind
+if find_ind != 1:
+    print(find_ind + 1)
+else:
+    print("Локальных максимумов нет") """
+
+# Вариант 2. Прохождения по индексам с конца списка
+""" import random
+
+our_list = [random.randint(1, 10) for _ in range(10)] # сделали рандомный список
+
+print(our_list)
+for ind in range(len(our_list) - 2, 0, -1):
+    if our_list[ind - 1] < our_list[ind] > our_list[ind + 1]:
+        print(ind + 1)
+        break
+else:
+    print("Локальных максимумов нет") """
+
+# Задача 2.
+# Создайте список из случайных чисел.
+# Найдите максимальное кол-во его одинаковых элементов
+
+# Вариант 1.
+""" import random
+our_list = [random.randint(1, 10) for _ in range(10)]
+print(our_list)
+
+count_dict = {}  #создали пустой словарь
+for el in our_list:
+    if el not in count_dict:
+        count_dict[el] = 1
+    else:
+        count_dict[el] += 1
+print(max(count_dict.values())) """
+
+# Вариант 2.
+
+# Задача 3.
+# Создайте список из случайных чисел.
+# Найите второй максимум.
+
+
+# Задача 4.
+# Создайте список из случайных чисел.
+# Найдите максимальное кол-во его различных элементов
