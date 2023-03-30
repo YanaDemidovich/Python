@@ -7,6 +7,21 @@
 # Вывод
 # 4
 
+# Вариант 1:
+""" some_str = input("Введите арифметическое выражение: ")
+result = 0
+znak = ''
+for el in some_str:
+    if el.isdigit():
+        if znak == "-":
+            result -= int(el)
+        else:
+            result += int(el)
+    else:
+        znak = el
+print(result) """
+
+# Вариант 2:
 """ some_list = input("Введите арифметическое выражение: ")
 print(some_list)
 print(eval(some_list)) """
@@ -28,4 +43,21 @@ print(eval(some_list)) """
 
 print(number(3, 5)) """
 
+
+# Задача:
+# Переносить текст по словам с каждой новой строки
+
+# Вариант 1
+""" some_str = input('Введите текст: ')
+word = '' 
+for letter in some_str:
+    if letter != ' ':
+        word += letter
+    else:
+        print(word)
+        word = '' """
+
+# Вариант 2
+""" some_str = input('Введите текст: ')
+print(*some_str.split(), sep='\n') """
 
