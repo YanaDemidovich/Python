@@ -256,15 +256,56 @@ for el in our_list:
         count_dict[el] = 1
     else:
         count_dict[el] += 1
+print(count_dict)
 print(max(count_dict.values())) """
 
 # Вариант 2.
+""" import random
+our_list = [random.randint(1, 10) for _ in range(10)]
+print(our_list)
+
+max_count = 0
+used_set = set() #создаем пустое множество
+
+for el in our_list:
+    if el not in used_set:
+        if our_list.count(el) > max_count:
+            max_count = our_list.count(el)
+        used_set.add(el)
+print(max_count) """
+
 
 # Задача 3.
 # Создайте список из случайных чисел.
-# Найите второй максимум.
+# Найдите второй максимум.
+# Пример:
+# a = [1, 2, 3] -> первый максимум == 3, второй максимум == 2
+
+""" import random
+our_list = [random.randint(1, 10) for _ in range(10)]
+print(our_list)
+
+our_list = list(set(our_list)) # создали из списка множество, чтобы удалить повторы
+first_max = our_list[0]
+second_max = our_list[1]
+if first_max < second_max:
+    first_max, second_max = second_max, first_max
+for el in our_list:
+    if el > first_max:
+        first_max, second_max = el, first_max
+    elif el > second_max:
+        second_max = el
+print(second_max) """
 
 
 # Задача 4.
 # Создайте список из случайных чисел.
 # Найдите максимальное кол-во его различных элементов
+
+""" import random
+our_list = [random.randint(1, 10) for _ in range(10)]
+print(our_list)
+
+our_list = set(our_list) # создали из списка множество, чтобы удалить повторы
+print(our_list)
+print(len(our_list)) """
