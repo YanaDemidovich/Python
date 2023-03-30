@@ -13,43 +13,14 @@
 # если с ритмом все не в порядке. Используйте split()
 
 
-stih = (str(input("Введите стихотворение: ")))
+""" stih = (str(input("Введите стихотворение: ")))
 print(stih)
 
 b = stih.split()
 print(b)
-print(type(b))
+#дальше не знаю как...((
 
-print(list(map(len, b))) # посчитала кол-во символов в каждом элементе
-
-for i in b:
-     for j in b[i]:
-        vowels = ['а','е','ё','и','о', 'у', 'э', 'ю', 'я']
-        sum = 0
-        for el in b[0]:
-            if el in vowels:
-                sum += 1
-print(b)
-
-    
-
-""" a = b.count(lambda x: x in b )
-print(a)
-print(type(a)) """
-
-
-""" def count_vowels(b):
-    vowels = ['а','е','ё','и','о', 'у', 'э', 'ю', 'я']
-    sum = 0
-    for el in b[0]:
-        if el in vowels:
-            sum += 1
-    return sum
-
-print(count_vowels(b)) """
-
-
-
+print(list(map(len, b))) """ # посчитала кол-во символов в каждом элементе
 
 
 
@@ -57,10 +28,10 @@ print(count_vowels(b)) """
 # Создайте список из случайных чисел.
 # Найдите кол-во различных элементов в нем
 
-""" import random
+import random
 our_list = [random.randint(1, 10) for _ in range(10)]
 print(our_list)
 
 our_list = set(our_list) # создали из списка множество, чтобы удалить повторы
 print(our_list)
-print(len(our_list)) """
+print(len(our_list))
