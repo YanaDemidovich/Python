@@ -29,3 +29,4 @@ b = int(input('Введите максимальное значение: '))
 for ind in range(len(some_list)):
     if a <= some_list[ind] <= b:
         print(ind) """
+
