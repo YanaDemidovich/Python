@@ -23,9 +23,9 @@ print(func(a1, d, n)) """
 # значения которых принадлежат заданному диапазону
 # т.е не меньше заданного минимума и не больше заданного максимума
 
-some_list = [int(input('Введите элемент списка: ')) for _ in range(int(input("Введите кол-во элементов: ")))]
+""" some_list = [int(input('Введите элемент списка: ')) for _ in range(int(input("Введите кол-во элементов: ")))]
 a = int(input('Введите минимальное значение: '))
 b = int(input('Введите максимальное значение: '))
 for ind in range(len(some_list)):
     if a <= some_list[ind] <= b:
-        print(ind)
+        print(ind) """
